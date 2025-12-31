@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:MPD xmlns:ns0="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="static" mediaPresentationDuration="PT1H29M20.1S" maxSegmentDuration="PT1M0.0S" minBufferTime="PT2M0.1S">
+	<ns0:ProgramInformation>
+		<ns0:Title>netvideo</ns0:Title>
+	</ns0:ProgramInformation>
+	<ns0:ServiceDescription id="0">
+	</ns0:ServiceDescription>
+	<ns0:Period id="0" start="PT0.0S">
+		<ns0:AdaptationSet id="0" contentType="video" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" frameRate="24000/1001" maxWidth="1146" maxHeight="480" par="43:18">
+			<ns0:Representation id="0" mimeType="video/mp4" codecs="avc1.42c01f" bandwidth="2500000" width="1146" height="480" sar="1720:1719">
+				<ns0:SegmentTemplate timescale="24000" initialization="video/seg_init_$RepresentationID$.mp4" media="video/seg_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<ns0:SegmentTimeline>
+						<ns0:S t="0" d="1441440" r="88" />
+						<ns0:S d="354354" />
+					</ns0:SegmentTimeline>
+				</ns0:SegmentTemplate>
+			</ns0:Representation>
+		</ns0:AdaptationSet>
+		<ns0:AdaptationSet id="1" contentType="audio" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" lang="spa">
+			<ns0:Representation id="1" mimeType="audio/mp4" codecs="mp4a.40.2" bandwidth="192000" audioSamplingRate="48000">
+				<ns0:AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+				<ns0:SegmentTemplate timescale="48000" initialization="audio/seg_init_$RepresentationID$.mp4" media="audio/seg_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<ns0:SegmentTimeline>
+						<ns0:S t="0" d="2879488" />
+						<ns0:S d="2880512" r="87" />
+						<ns0:S d="672768" />
+					</ns0:SegmentTimeline>
+				</ns0:SegmentTemplate>
+			</ns0:Representation>
+		</ns0:AdaptationSet>
+	</ns0:Period>
+</ns0:MPD>
